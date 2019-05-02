@@ -24,7 +24,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  css: ['~assets/sass/global.scss'],
 
   /*
    ** Plugins to load before mounting the App
@@ -37,9 +37,26 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
+    // Doc: https://github.com/nuxt-community/style-resources-module
+    '@nuxtjs/style-resources',
     // Doc: https://buefy.github.io/#/documentation
     'nuxt-buefy'
   ],
+  /*
+   ** Share variables, mixins, functions across all style files
+   */
+  styleResources: {
+    sass: ['~assets/sass/_variable.scss']
+  },
+  /*
+   ** Buefy using FontAwesome icon
+   */
+  buefy: {
+    // Reference: https://github.com/buefy/nuxt-buefy/issues/27#issuecomment-432452220
+    defaultIconPack: 'fas',
+    materialDesignIconsHRef:
+      'https://use.fontawesome.com/releases/v5.4.1/css/all.css'
+  },
   /*
    ** Axios module configuration
    */

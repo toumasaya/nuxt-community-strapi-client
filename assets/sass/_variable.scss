@@ -1,0 +1,61 @@
+@import '~bulma/sass/utilities/_all';
+
+$primary: #41b883;
+$primary-invert: findColorInvert($primary);
+$primary-dark: #3b8070;
+$primary-dark-invert: findColorInvert($primary);
+$secondary: #35495e;
+$secondary-invert: findColorInvert($secondary);
+
+$colors: (
+  'white': (
+    $white,
+    $black
+  ),
+  'black': (
+    $black,
+    $white
+  ),
+  'light': (
+    $light,
+    $light-invert
+  ),
+  'dark': (
+    $dark,
+    $dark-invert
+  ),
+  'primary': (
+    $primary,
+    $primary-invert
+  ),
+  'primary-dark': (
+    $primary-dark,
+    $primary-dark-invert
+  ),
+  'secondary': (
+    $secondary,
+    $secondary-invert
+  ),
+  'info': (
+    $info,
+    $info-invert
+  ),
+  'success': (
+    $success,
+    $success-invert
+  ),
+  'warning': (
+    $warning,
+    $warning-invert
+  ),
+  'danger': (
+    $danger,
+    $danger-invert
+  )
+);
+
+$link: $primary;
+$link-invert: $primary-invert;
+$link-focus-border: $primary;
+
+$family-sans-serif: 'Overpass', sans-serif;

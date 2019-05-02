@@ -1,0 +1,16 @@
+@import '~bulma';
+@import '~buefy/src/scss/buefy';
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: $family-sans-serif;
+}
+
+* {
+  &:focus {
+    outline: none;
+  }
+}
