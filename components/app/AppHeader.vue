@@ -30,14 +30,28 @@ export default {
       themeMode: 'Dark Mode'
     }
   },
+  mounted() {
+    const currentTheme = localStorage.getItem('theme')
+      ? localStorage.getItem('theme')
+      : null
+    if (currentTheme) {
+      document.documentElement.setAttribute('data-theme', currentTheme)
+      if (currentTheme === 'light') {
+        this.themeMode = 'Light Mode'
+      }
+    }
+    console.log(localStorage.getItem('theme'))
+  },
   methods: {
     setThemeMode() {
       const mode = this.themeMode
 
       if (mode === 'Dark Mode') {
         document.documentElement.setAttribute('data-theme', 'dark')
+        localStorage.setItem('theme', 'dark')
       } else if (mode === 'Light Mode') {
         document.documentElement.setAttribute('data-theme', 'light')
+        localStorage.setItem('theme', 'light')
       }
     }
   }
