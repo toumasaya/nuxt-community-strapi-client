@@ -1,11 +1,20 @@
 <template lang="pug">
-  section(class="section")
-    PostCard(v-for="post in posts" :key="post.id" :post="post")
+  section(class="columns is-gapless")
+    div(class="column is-6")
+      section(class="section")
+        PostCard(v-for="post in posts" :key="post.id" :post="post")
+    div(class="column is-6")
+      section(class="section")
+        section(class="post-content")
+          PostShow
+  //- section(class="section")
+  //-   PostCard(v-for="post in posts" :key="post.id" :post="post")
 </template>
 
 <script>
+import PostCard from '@/components/post/PostCard'
+import PostShow from '@/components/post/PostShow'
 import Strapi from 'strapi-sdk-javascript/build/main'
-import PostCard from '@/components/PostCard'
 
 const apiUrl = process.env.API_URL || 'http://localhost:1337'
 const strapi = new Strapi(apiUrl)
@@ -13,7 +22,8 @@ const strapi = new Strapi(apiUrl)
 export default {
   name: 'HomePage',
   components: {
-    PostCard
+    PostCard,
+    PostShow
   },
   async asyncData({ error }) {
     try {

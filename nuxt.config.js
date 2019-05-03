@@ -10,10 +10,27 @@ export default {
     title: pkg.name,
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: pkg.description }
+      {
+        name: 'viewport',
+        content: 'width=device-width, initial-scale=1'
+      },
+      {
+        hid: 'description',
+        name: 'description',
+        content: pkg.description
+      }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [
+      {
+        rel: 'icon',
+        type: 'image/x-icon',
+        href: '/favicon.ico'
+      },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css?family=Fira+Sans:400,600,700'
+      }
+    ]
   },
 
   /*
@@ -24,7 +41,14 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['~assets/sass/global.scss'],
+  css: [
+    '~assets/sass/global.scss',
+    '~assets/sass/_layout.scss',
+    '~assets/sass/_appHeader.scss',
+    '~assets/sass/_appSidebar.scss',
+    '~assets/sass/_postcard.scss',
+    '~assets/sass/_postshow.scss'
+  ],
 
   /*
    ** Plugins to load before mounting the App

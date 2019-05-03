@@ -1,0 +1,23 @@
+.app {
+  display: flex;
+  width: 100%;
+}
+
+.app__sidebar {
+  position: relative;
+  flex: 0 0 4vw;
+  z-index: 100;
+
+  .sidebar {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    background: var(--bg-color);
+    box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.app__content {
+  flex: 1; // this is tricky
+  background: var(--bg-color);
+}

@@ -1,0 +1,15 @@
+<template lang="pug">
+  ul(class="nav-sidebar")
+    nuxt-link(class="nav-sidebar-item" to="/" tag="li")
+      a(class="nav-sidebar-link")
+        b-tooltip(label="All Communities" type="is-primary-dark" position="is-right")
+          img(src="https://blender.community/api/storage/file/59/59d141c5c020d600e9ea38f9/45/45c9c92f09c144afbcf48b7df7b04312-l.jpg")
+    nuxt-link(class="nav-sidebar-item" to="/" tag="li")
+      a(class="nav-sidebar-link")
+        b-tooltip(label="Nuxt Today" type="is-primary-dark" position="is-right")
+          img(src="https://blender.community/api/storage/file/59/59d142eac020d60024a7fb76/79/7998c8546e1541da9f97fe684480793a-l.jpg")
+    nuxt-link(class="nav-sidebar-item" to="/" tag="li")
+      a(class="nav-sidebar-link")
+        b-tooltip(label="Others" type="is-primary-dark" position="is-right")
+          img(src="https://blender.community/api/storage/file/59/59ee2b501de2fb001513f45c/b5/b5f9949b3e704c3189362321fb997c73-l.jpg")
+</template>
