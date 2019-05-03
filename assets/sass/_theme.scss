@@ -12,8 +12,12 @@
 // AppHeader
 .app__header {
   .navbar {
-    &:after {
-      background-color: var(--basic);
+    // &:after {
+    //   background-color: var(--basic);
+    // }
+
+    .theme-switch {
+      color: var(--font-color);
     }
   }
 }
