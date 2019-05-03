@@ -6,18 +6,13 @@
     div(class="column is-6")
       section(class="section")
         section(class="post-content")
-          PostShow
-  //- section(class="section")
-  //-   PostCard(v-for="post in posts" :key="post.id" :post="post")
+          //- PostShow
+          nuxt-child
 </template>
 
 <script>
 import PostCard from '@/components/post/PostCard'
 import PostShow from '@/components/post/PostShow'
-import Strapi from 'strapi-sdk-javascript/build/main'
-
-const apiUrl = process.env.API_URL || 'http://localhost:1337'
-const strapi = new Strapi(apiUrl)
 
 export default {
   name: 'HomePage',
@@ -25,25 +20,12 @@ export default {
     PostCard,
     PostShow
   },
-  async asyncData({ error }) {
+  async asyncData({ $axios, error }) {
     try {
-      const response = await strapi.request('post', '/graphql', {
-        data: {
-          query: `query {
-            posts {
-              _id,
-              title,
-              content,
-              comment,
-              tag
-            }
-          }
-          `
-        }
-      })
-
+      const response = await $axios.get('http://localhost:1337/posts')
+      console.log(response.data)
       return {
-        posts: response.data.posts
+        posts: response.data
       }
     } catch (e) {
       error({

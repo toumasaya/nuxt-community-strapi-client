@@ -10,13 +10,13 @@
       div(class="post-details")
         div(class="post-details__info")
           ul(class="post-tag")
-            li(class="post-tag__item") General
-            li(class="post-tag__item") Modeling
-            li(class="post-tag__item") Rigging
+            li(class="post-tag__item"
+                v-for="(tag, index) in post.tag"
+                :key="index") {{ tag }}
           span(class="post-updated-date") yesterday at 15:00
-        h2 Some post title here
+        h2 {{ post.title }}
     div(class="post__body")
-      p This is useful in conjunction with the search feature - for example when having to mass clean-up imported alembic files etc. This would be consistent with the 3D View where you can't select hidden objects too.
+      p {{ post.content }}
     footer(class="post__footer")
       nuxt-link(class="author-info" to="/")
         div(class="author-info__avatar")
@@ -31,3 +31,14 @@
         button(class="button is-transparent")
           b-icon(icon="facebook-f" pack="fab" size="is-small")
 </template>
+
+<script>
+export default {
+  props: {
+    // eslint-disable-next-line vue/require-default-prop
+    post: {
+      type: Object
+    }
+  }
+}
+</script>

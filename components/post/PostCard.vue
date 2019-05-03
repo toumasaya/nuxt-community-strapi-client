@@ -1,5 +1,5 @@
 <template lang="pug">
-  div(class="post-card" data-url="")
+  div(class="post-card" @click="showPost(post)")
     div(class="post-card__content")
       div(class="post-card__header")
         nuxt-link(class="post-category" to="/") Nuxt Today
@@ -7,7 +7,7 @@
           li(class="post-tag__item" v-for="(tag, index) in post.tag" :key="index")
             |{{ tag }}
       div(class="post-card__title")
-        h4.title: nuxt-link(to="/") {{ post.title }}
+        h4.title: nuxt-link(:to="'/post/' + post.id") {{ post.title }}
       div(class="post-card__footer")
         span(class="post-card__footer__item")
           |9
@@ -26,6 +26,11 @@ export default {
     // eslint-disable-next-line vue/require-default-prop
     post: {
       type: Object
+    }
+  },
+  methods: {
+    showPost(post) {
+      return this.$router.push('/post/' + post.id)
     }
   }
 }
