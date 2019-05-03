@@ -24,10 +24,10 @@
         div(class="author-info__name") John
         div(class="author-info__posts") (12)
       div(class="buttons")
-        button(class="button is-circled")
+        button(class="button is-transparent")
           b-icon(icon="expand-arrows-alt" size="is-small")
-        button(class="button is-circled")
+        button(class="button is-transparent")
           b-icon(icon="twitter" pack="fab" size="is-small")
-        button(class="button is-circled")
+        button(class="button is-transparent")
           b-icon(icon="facebook-f" pack="fab" size="is-small")
 </template>

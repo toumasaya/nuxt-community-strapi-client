@@ -1,6 +1,48 @@
 @import '~bulma';
 @import '~buefy/src/scss/buefy';
 
+:root {
+  --bg-color: #151516;
+  --primary-color: #41b883;
+  --font-color: rgb(221, 222, 227);
+  --font-color-opcity-5: rgba(221, 222, 227, 0.5);
+  --font-color-opcity-8: rgba(221, 222, 227, 0.8);
+  --font-secondary-color: rgb(108, 117, 125);
+  --card-bg-color: rgb(56, 57, 65);
+  --card-bg-hover-color: rgb(68, 69, 78);
+  --card-bg-active-color: rgb(32, 33, 37);
+  --card-tag-color: rgb(158, 159, 162);
+  --card-footer-color: rgb(221, 222, 227);
+  --post-header-bg-color: rgb(32, 33, 37);
+  --post-header-info-color: rgb(108, 117, 125);
+  --post-footer-bg-color: rgb(32, 33, 37);
+  --post-body-bg-color: rgb(68, 69, 78);
+  --rating-box-bg-color: rgb(44, 45, 51);
+  --rating-box-hover-bg-color: rgb(56, 57, 65);
+  --sidebar-bg-color: rgb(32, 33, 37);
+}
+
+[data-theme='light'] {
+  --bg-color: #e7e7ec;
+  --primary-color: #41b883;
+  --font-color: #4d4e53;
+  --font-color-opcity-5: rgba(77, 78, 83, 0.5);
+  --font-color-opcity-8: rgba(43, 43, 43, 0.8);
+  --font-secondary-color: #6c757d;
+  --card-bg-color: #f8f9fa;
+  --card-bg-hover-color: rgb(255, 255, 255);
+  --card-bg-active-color: rgb(32, 33, 37);
+  --card-tag-color: #9e9fa2;
+  --card-footer-color: #4d4e53;
+  --post-header-bg-color: #dcdde4;
+  --post-header-info-color: #6c757d;
+  --post-footer-bg-color: #f1f1f4;
+  --post-body-bg-color: rgb(247, 248, 249);
+  --rating-box-bg-color: #eaebef;
+  --rating-box-hover-bg-color: #f8f9fa;
+  --sidebar-bg-color: #fcfcfc;
+}
+
 body,
 button,
 input,
@@ -13,4 +55,17 @@ textarea {
   &:focus {
     outline: none;
   }
+}
+
+.button {
+  transition: all 125ms ease-in-out;
+}
+
+.button.is-circled {
+  border-radius: 100%;
+}
+
+.button.is-transparent {
+  background-color: transparent;
+  border: none;
 }

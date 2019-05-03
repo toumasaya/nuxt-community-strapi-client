@@ -1,0 +1,132 @@
+// Layout
+.app__sidebar {
+  .sidebar {
+    background: var(--sidebar-bg-color);
+  }
+}
+
+.app__content {
+  background: var(--bg-color);
+}
+
+// AppHeader
+.app__header {
+  .navbar {
+    &:after {
+      background-color: var(--basic);
+    }
+  }
+}
+
+// PostCard
+.post-card {
+  background: var(--card-bg-color);
+
+  &:hover {
+    background: var(--card-bg-hover-color);
+  }
+
+  &__title {
+    a {
+      color: var(--font-color);
+
+      &:hover {
+        color: var(--primary-color);
+      }
+    }
+  }
+
+  &__footer {
+    &__item {
+      color: var(--card-footer-color);
+
+      &:after {
+        color: var(--font-secondary-color);
+      }
+    }
+
+    .icon {
+      color: var(--font-secondary-color);
+    }
+  }
+}
+
+.post-category {
+  color: var(--font-color);
+
+  &:after {
+    color: var(--font-secondary-color);
+  }
+
+  &:hover {
+    color: var(--primary-color);
+  }
+}
+
+.post-tag {
+  color: var(--card-tag-color);
+}
+
+// PostShow
+.post {
+  background-color: var(--post-body-bg-color);
+
+  &__header {
+    background-color: var(--post-header-bg-color);
+    border-bottom: 2px solid var(--basic);
+  }
+
+  &__body {
+    color: var(--font-color);
+  }
+
+  &__footer {
+    background-color: var(--post-footer-bg-color);
+
+    .button {
+      color: var(--font-secondary-color);
+      &:hover {
+        color: var(--font-color);
+      }
+    }
+  }
+}
+
+.rating-box {
+  color: var(--font-color);
+
+  &__value {
+    background-color: var(--rating-box-bg-color);
+  }
+
+  .button {
+    color: var(--font-color-opcity-5);
+    background-color: var(--rating-box-bg-color);
+
+    &:hover {
+      background-color: var(--rating-box-hover-bg-color);
+      color: var(--primary-color);
+    }
+  }
+}
+
+.post-details {
+  h2 {
+    color: var(--font-color);
+  }
+
+  &__info {
+    color: var(--post-header-info-color);
+    .post-tag {
+      color: var(--post-header-info-color);
+    }
+  }
+}
+
+.author-info {
+  color: var(--font-color-opcity-8);
+
+  &:hover {
+    color: var(--primary-color);
+  }
+}

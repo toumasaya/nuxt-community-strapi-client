@@ -28,7 +28,7 @@ export default {
       },
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css?family=Fira+Sans:400,600,700'
+        href: 'https://fonts.googleapis.com/css?family=Lato:400,700'
       }
     ]
   },
@@ -43,6 +43,7 @@ export default {
    */
   css: [
     '~assets/sass/global.scss',
+    '~assets/sass/_theme.scss',
     '~assets/sass/_layout.scss',
     '~assets/sass/_appHeader.scss',
     '~assets/sass/_appSidebar.scss',

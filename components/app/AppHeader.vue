@@ -12,7 +12,7 @@
               icon="search")
         div(class="navbar-item")
           div(class="field")
-            b-switch(:value="true") Light Mode
+            b-switch(:value="true") Dark Mode
         div(class="navbar-item")
           div(class="buttons")
             nuxt-link(class="button is-primary" to="/"): strong Sign up
