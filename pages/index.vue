@@ -23,7 +23,7 @@ export default {
   async asyncData({ $axios, error }) {
     try {
       const response = await $axios.get('http://localhost:1337/posts')
-      console.log(response.data)
+      // console.log(response.data)
       return {
         posts: response.data
       }

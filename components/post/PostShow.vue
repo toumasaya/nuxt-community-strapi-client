@@ -4,11 +4,13 @@
       div(class="rating-box")
         button(class="button rating-box__up")
           b-icon(icon="angle-up" size="is-small")
-        div(class="rating-box__value") 1
+        div(class="rating-box__value") {{ post.rating }}
         button(class="button rating-box__down")
           b-icon(icon="angle-down" size="is-small")
       div(class="post-details")
         div(class="post-details__info")
+          div(class="rating-hot" v-if="post.rating > 5")
+            b-icon(icon="fire" size="is-small" type="is-danger")
           ul(class="post-tag")
             li(class="post-tag__item"
                 v-for="(tag, index) in post.tag"

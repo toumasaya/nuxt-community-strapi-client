@@ -121,8 +121,16 @@
 
   &__info {
     color: var(--post-header-info-color);
+
     .post-tag {
       color: var(--post-header-info-color);
+    }
+
+    .rating-hot,
+    .post-tag {
+      &:after {
+        color: var(--font-color-opcity-5);
+      }
     }
   }
 }
