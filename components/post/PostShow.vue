@@ -13,7 +13,7 @@
             li(class="post-tag__item"
                 v-for="(tag, index) in post.tag"
                 :key="index") {{ tag }}
-          span(class="post-updated-date") yesterday at 15:00
+          span(class="post-updated-date") {{ formatDate(post.updatedAt) }}
         h2 {{ post.title }}
     div(class="post__body")
       p {{ post.content }}
@@ -38,6 +38,11 @@ export default {
     // eslint-disable-next-line vue/require-default-prop
     post: {
       type: Object
+    }
+  },
+  methods: {
+    formatDate(date) {
+      return this.$showDate(date)
     }
   }
 }

@@ -16,7 +16,7 @@
           |9
           b-icon(icon="comment" size="is-small")
         span(class="post-card__footer__item")
-          |{{ formatDate }}
+          |{{ formatDate(post.updatedAt) }}
     div(class="post-card__img")
       img(src="https://picsum.photos/id/800/600/400")
 </template>
@@ -29,19 +29,12 @@ export default {
       type: Object
     }
   },
-  data() {
-    return {
-      date: '2019-05-04T08:05:34.221Z'
-    }
-  },
-  computed: {
-    formatDate() {
-      return this.$showDate(this.date)
-    }
-  },
   methods: {
     showPost(post) {
       return this.$router.push('/post/' + post.id)
+    },
+    formatDate(date) {
+      return this.$showDate(date)
     }
   }
 }
