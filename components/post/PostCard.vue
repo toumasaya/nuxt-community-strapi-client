@@ -36,21 +36,7 @@ export default {
   },
   computed: {
     formatDate() {
-      const now = this.$moment()
-      // const fewHours = this.$moment().subtract(86400, 'seconds')
-
-      // const diffHours = now.diff(fewHours, 'seconds')
-      const diffDate = now.diff(this.date, 'seconds')
-      let showDate
-
-      console.log(diffDate)
-
-      if (diffDate < 86400) {
-        showDate = this.$moment(this.date).fromNow()
-      } else if (diffDate >= 86400) {
-        showDate = this.$moment(this.date).calendar()
-      }
-      return showDate
+      return this.$showDate(this.date)
     }
   },
   methods: {
