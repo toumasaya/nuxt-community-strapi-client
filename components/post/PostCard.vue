@@ -15,7 +15,8 @@
         span(class="post-card__footer__item")
           |9
           b-icon(icon="comment" size="is-small")
-        span(class="post-card__footer__item") yesterday at 15:00
+        span(class="post-card__footer__item")
+          |{{ formatDate }}
     div(class="post-card__img")
       img(src="https://picsum.photos/id/800/600/400")
 </template>
@@ -26,6 +27,30 @@ export default {
     // eslint-disable-next-line vue/require-default-prop
     post: {
       type: Object
+    }
+  },
+  data() {
+    return {
+      date: '2019-05-04T08:05:34.221Z'
+    }
+  },
+  computed: {
+    formatDate() {
+      const now = this.$moment()
+      // const fewHours = this.$moment().subtract(86400, 'seconds')
+
+      // const diffHours = now.diff(fewHours, 'seconds')
+      const diffDate = now.diff(this.date, 'seconds')
+      let showDate
+
+      console.log(diffDate)
+
+      if (diffDate < 86400) {
+        showDate = this.$moment(this.date).fromNow()
+      } else if (diffDate >= 86400) {
+        showDate = this.$moment(this.date).calendar()
+      }
+      return showDate
     }
   },
   methods: {
