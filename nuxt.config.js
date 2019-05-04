@@ -48,7 +48,8 @@ export default {
     '~assets/sass/_appHeader.scss',
     '~assets/sass/_appSidebar.scss',
     '~assets/sass/_postcard.scss',
-    '~assets/sass/_postshow.scss'
+    '~assets/sass/_postshow.scss',
+    '~assets/sass/_postFilter.scss'
   ],
 
   /*

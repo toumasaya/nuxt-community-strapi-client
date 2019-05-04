@@ -20,6 +20,12 @@
   --rating-box-bg-color: rgb(44, 45, 51);
   --rating-box-hover-bg-color: rgb(56, 57, 65);
   --sidebar-bg-color: rgb(32, 33, 37);
+  --filter-button-bg-color: rgb(56, 57, 65);
+  --filter-button-border-color: rgb(56, 57, 65);
+  --filter-button-bg-hover-color: rgb(68, 69, 78);
+  --filter-select-bg-color: rgb(56, 57, 65);
+  --filter-select-border-color: rgb(56, 57, 65);
+  --filter-select-focus-color: rgb(108, 117, 125);
 }
 
 [data-theme='light'] {
@@ -41,6 +47,12 @@
   --rating-box-bg-color: #eaebef;
   --rating-box-hover-bg-color: #f8f9fa;
   --sidebar-bg-color: #fcfcfc;
+  --filter-button-bg-color: #f8f9fa;
+  --filter-button-border-color: #dcdde4;
+  --filter-button-bg-hover-color: rgb(255, 255, 255);
+  --filter-select-bg-color: #f8f9fa;
+  --filter-select-border-color: #dcdde4;
+  --filter-select-focus-color: #41b883;
 }
 
 body,

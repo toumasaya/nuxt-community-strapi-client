@@ -142,3 +142,37 @@
     color: var(--primary-color);
   }
 }
+
+// PostFilter
+.post-filter {
+  .button {
+    background-color: var(--filter-button-bg-color);
+    border-color: var(--filter-button-border-color);
+    color: var(--font-color);
+
+    &:hover {
+      background-color: var(--filter-button-bg-hover-color);
+      border-color: var(--filter-button-bg-hover-color);
+    }
+  }
+
+  .select {
+    select {
+      background-color: var(--filter-select-bg-color);
+      border-color: var(--filter-select-border-color);
+      color: var(--font-color);
+
+      &:focus {
+        border-color: var(--filter-select-focus-color);
+        box-shadow: none;
+      }
+    }
+    &:not(.is-multiple):not(.is-loading)::after {
+      border-color: var(--font-color);
+    }
+
+    &:not(.is-multiple):not(.is-loading):hover::after {
+      border-color: var(--primary-color);
+    }
+  }
+}

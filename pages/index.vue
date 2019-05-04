@@ -2,6 +2,7 @@
   section(class="columns is-gapless")
     div(class="column is-6")
       section(class="section")
+        PostFilter
         PostCard(v-for="post in posts" :key="post.id" :post="post")
     div(class="column is-6")
       section(class="section")
@@ -13,12 +14,14 @@
 <script>
 import PostCard from '@/components/post/PostCard'
 import PostShow from '@/components/post/PostShow'
+import PostFilter from '@/components/post/PostFilter'
 
 export default {
   name: 'HomePage',
   components: {
     PostCard,
-    PostShow
+    PostShow,
+    PostFilter
   },
   async asyncData({ $axios, error }) {
     try {
