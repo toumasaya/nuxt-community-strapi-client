@@ -176,3 +176,110 @@
     }
   }
 }
+
+// PostForm
+.form-section {
+  background-color: var(--card-bg-color);
+
+  .field {
+    .label {
+      color: var(--font-color-opcity-8);
+    }
+
+    .select {
+      select {
+        background-color: var(--form-select-bg-color);
+        border-color: var(--filter-select-border-color);
+        color: var(--font-color);
+
+        &:focus {
+          border-color: var(--filter-select-focus-color);
+          box-shadow: none;
+        }
+
+        &:hover {
+          border-color: var(--form-select-border-hover-color);
+        }
+      }
+
+      &:not(.is-multiple):not(.is-loading)::after {
+        border-color: var(--font-color);
+      }
+
+      &:not(.is-multiple):not(.is-loading):hover::after {
+        border-color: var(--primary-color);
+      }
+    }
+
+    .control {
+      .input,
+      .textarea {
+        background-color: var(--form-input-bg-color);
+        border-color: var(--form-input-border-color);
+        color: var(--font-color);
+
+        &:hover {
+          border-color: var(--form-select-border-hover-color);
+        }
+
+        &:focus {
+          box-shadow: none;
+          border-color: var(--form-select-border-hover-color);
+        }
+
+        &::placeholder {
+          color: var(--font-color-opcity-5);
+        }
+      }
+    }
+
+    .taginput.control {
+      .is-focusable {
+        box-shadow: none;
+        background-color: var(--form-input-bg-color);
+        border-color: var(--form-input-border-color);
+        color: var(--font-color);
+
+        &:focus {
+          box-shadow: none;
+          border-color: var(--form-select-border-hover-color);
+        }
+      }
+
+      .tag:not(body) {
+        background-color: var(--taginput-tag-bg-color);
+        color: var(--font-color);
+      }
+
+      .delete {
+        background-color: var(--taginput-delete-bg-color);
+        color: var(--font-color);
+
+        &:hover {
+          background-color: var(--taginput-delete-bg-hover-color);
+        }
+      }
+
+      .control.has-icons-left {
+        .icon {
+          color: var(--font-color-opcity-5);
+        }
+
+        .input::placeholder {
+          color: var(--font-color-opcity-5);
+        }
+
+        .input:focus ~ .icon {
+          color: var(--font-color-opcity-8);
+        }
+      }
+    }
+  }
+}
+
+// Section
+.section {
+  .title {
+    color: var(--font-color-opcity-8);
+  }
+}

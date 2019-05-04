@@ -13,7 +13,7 @@
         b-icon(icon="th-large")
       //- button(class="button")
       //-   b-icon(icon="list")
-    button(class="button")
+    nuxt-link(class="button" to="/post/new")
       b-icon(icon="plus-circle")
       span Add Post
 

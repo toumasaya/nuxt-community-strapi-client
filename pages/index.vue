@@ -7,7 +7,6 @@
     div(class="column is-6")
       section(class="section")
         section(class="post-content")
-          //- PostShow
           nuxt-child
 </template>
 
@@ -22,6 +21,12 @@ export default {
     PostCard,
     PostShow,
     PostFilter
+  },
+  data() {
+    return {
+      isComponentModalActive: false,
+      formProps: {}
+    }
   },
   async asyncData({ $axios, error }) {
     try {
