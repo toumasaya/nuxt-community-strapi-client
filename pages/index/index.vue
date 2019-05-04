@@ -1,5 +1,7 @@
 <template lang="pug">
-  h2 About...
+  article(class="post")
+    div(class="post__body")
+     h1 About
 </template>
 
 <script>
