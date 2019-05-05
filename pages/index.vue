@@ -3,7 +3,7 @@
     div(class="column is-6")
       section(class="section")
         PostFilter
-        PostCard(v-for="post in posts" :key="post.id" :post="post")
+        PostCard(v-for="post in getPosts" :key="post.id" :post="post")
     div(class="column is-6")
       section(class="section")
         section(class="post-content")
@@ -22,24 +22,9 @@ export default {
     PostShow,
     PostFilter
   },
-  data() {
-    return {
-      isComponentModalActive: false,
-      formProps: {}
-    }
-  },
-  async asyncData({ $axios, error }) {
-    try {
-      const response = await $axios.get('http://localhost:1337/posts')
-      // console.log(response.data)
-      return {
-        posts: response.data
-      }
-    } catch (e) {
-      error({
-        statusCode: 503,
-        message: 'Unable to fetch events at this time. Please try again.'
-      })
+  computed: {
+    getPosts() {
+      return this.$store.getters.getPosts
     }
   }
 }
