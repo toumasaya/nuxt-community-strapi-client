@@ -14,7 +14,7 @@
           b-icon(icon="fire" size="is-small" type="is-danger" v-if="post.rating > 5")
           b-icon(icon="heart" size="is-small" v-else)
         span(class="post-card__footer__item")
-          |{{ post.comment ? post.comment.length : 0 }}
+          |{{ post.comments ? post.comments.length : 0 }}
           b-icon(icon="comment" size="is-small")
         span(class="post-card__footer__item")
           |{{ formatDate(post.updatedAt) }}
@@ -32,7 +32,7 @@ export default {
   },
   computed: {
     shorterList() {
-      return this.post.tag.slice(0, 2)
+      return this.post.tags.slice(0, 2)
     }
   },
   methods: {

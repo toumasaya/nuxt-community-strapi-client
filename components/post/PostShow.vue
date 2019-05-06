@@ -13,7 +13,7 @@
             b-icon(icon="fire" size="is-small" type="is-danger")
           ul(class="post-tag")
             li(class="post-tag__item"
-                v-for="(tag, index) in post.tag"
+                v-for="(tag, index) in post.tags"
                 :key="index") {{ tag }}
           span(class="post-updated-date") {{ formatDate(post.updatedAt) }}
         h2 {{ post.title }}

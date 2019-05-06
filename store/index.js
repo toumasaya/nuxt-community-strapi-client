@@ -36,7 +36,7 @@ const createStore = () => {
           ...post,
           createdAt: new Date(),
           updatedAt: new Date(),
-          comment: [],
+          comments: [],
           rating: 0
         }
         return this.$axios

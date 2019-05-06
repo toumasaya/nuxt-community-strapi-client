@@ -40,7 +40,7 @@ export default {
             category: null,
             title: '',
             content: '',
-            tag: []
+            tags: []
           }
     }
   },
