@@ -21,7 +21,7 @@ const createStore = () => {
     actions: {
       nuxtServerInit(vuexContext, context) {
         return context.app.$axios
-          .get('http://localhost:1337/posts')
+          .get(`${context.env.API}/posts`)
           .then(res => {
             // console.log(res.data)
             vuexContext.commit('SET_POSTS', res.data)
@@ -40,7 +40,7 @@ const createStore = () => {
           rating: 0
         }
         return this.$axios
-          .post('http://localhost:1337/posts', postData)
+          .post(`${process.env.API}/posts`, postData)
           .then(result => {
             vuexContext.commit('ADD_POST', {
               ...postData,

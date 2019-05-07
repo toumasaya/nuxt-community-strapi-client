@@ -110,5 +110,8 @@ export default {
         })
       }
     }
+  },
+  env: {
+    API: process.env.API || 'http://localhost:1337'
   }
 }

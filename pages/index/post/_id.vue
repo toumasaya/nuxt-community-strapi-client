@@ -9,22 +9,23 @@ export default {
   components: {
     PostShow
   },
-  async asyncData({ $axios, error, params }) {
+  // could use basic context like:
+  // asyncData(context) {...}
+  // context.app.$axios
+  // or use following:
+  async asyncData({ $axios, error, params, env }) {
     try {
-      const response = await $axios.get(
-        'http://localhost:1337/posts/' + params.id
-      )
+      const response = await $axios.get(`${env.API}/posts/${params.id}`)
       return {
         post: response.data
       }
     } catch (e) {
-      // error({
-      //   statusCode: 503,
-      //   message: `Unable to fetch event no.${
-      //     params.id
-      //   } at this time. Please try again.`
-      // })
-      console.log(e)
+      error({
+        statusCode: 503,
+        message: `Unable to fetch event no.${
+          params.id
+        } at this time. Please try again.`
+      })
     }
   }
 }
