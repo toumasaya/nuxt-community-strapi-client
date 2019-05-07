@@ -18,12 +18,13 @@ export default {
         post: response.data
       }
     } catch (e) {
-      error({
-        statusCode: 503,
-        message: `Unable to fetch event no.${
-          params.id
-        } at this time. Please try again.`
-      })
+      // error({
+      //   statusCode: 503,
+      //   message: `Unable to fetch event no.${
+      //     params.id
+      //   } at this time. Please try again.`
+      // })
+      console.log(e)
     }
   }
 }
